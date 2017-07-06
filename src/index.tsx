@@ -5,18 +5,17 @@ import {
   Route
 } from 'react-router-dom';
 
-import App from './App';
-import Hello from './components/hello/hello';
-import SearchBar from './components/search-bar/search-bar';
+import SearchForm from './components/search-form/search-form';
 import registerServiceWorker from './registerServiceWorker';
+import AddForm from './components/add-form/add-form'
 import './index.css';
 
 ReactDOM.render(
 	<Router>
     	<div>
-	      <Route exact path='/' component= {App}/>
-	      <Route path="/about" component={Hello}/>
-	      <Route path="/topics" component={SearchBar}/>
+	      <Route exact path='/' component= {AddForm}/>
+	      <Route path="/new" component={AddForm}/>
+	      <Route path="/search" component={SearchForm}/>
 	    </div>
     </Router>,
   	document.getElementById('root') as HTMLElement
