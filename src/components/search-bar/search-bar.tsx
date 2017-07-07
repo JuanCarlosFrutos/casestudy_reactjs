@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-export interface Props {
-  name: string;
-}
+/*
+ * Form for search information about companies
+ */
 
 export default class SearchBar extends React.Component<any, any> {
   render() {
