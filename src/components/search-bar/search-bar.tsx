@@ -5,6 +5,7 @@ import * as React from 'react';
  */
 
 export default class SearchBar extends React.Component<any, any> {
+	
   render() {
 
     return (
@@ -13,6 +14,8 @@ export default class SearchBar extends React.Component<any, any> {
               <button>Go!</button>
         </fieldset>
     );
+
   }
+
 }
 

@@ -8,40 +8,44 @@ import { Link } from 'react-router-dom';
 
 export default class AddForm extends React.Component<any, any> {
 
-	private keys : Array<any> = [<KeyValue name={"Hi!"}></KeyValue>];
-
 	constructor(){
 		super();
-		this.addKeyValue = this.addKeyValue.bind(this);
-		//	this.state.push(<KeyValue name={"Hi!"}></KeyValue>);
+		this.appendInput = this.appendInput.bind(this);
+ 		this.state = { inputs: ['input-0'] };
 	}
 
 	/*
 	 * Add more information about a company
 	 */
-	private addKeyValue() : void {
-		this.keys.push(<KeyValue name={"Hi!"}></KeyValue>);
-		alert(this.state);
-	}
 
-	// private renderKeyValue (name : string ) {
-	// 	return (
-	// 		<KeyValue name={name}></KeyValue>
-	// 	);
-	// }
+    private appendInput() {
+        let newInput = `input-${this.state.inputs.length}`;
+        this.setState({ inputs: this.state.inputs.concat([newInput]) });
+    }
+
+    /*
+	 * Show information about company
+	 */
+
+	private renderKeyValue (name : string ) {
+		return (
+			<KeyValue name={name}></KeyValue>
+		);
+	}
 
 	render() {
 
 	    return (
-			<div>
-				<div>
-				    {this.state}
-				</div>
 
-				<button id="plusbutton" onClick={this.addKeyValue}>+</button>
+			<div>
+				{this.state.inputs.map(this.renderKeyValue)}
+
+				<button id="plusbutton" onClick={this.appendInput}>+</button>
 				<Link to="/search"><button>Save</button></Link>
 				<Link to="/search"><button id="pulsa">Close</button></Link>
+
 			</div>
+			
 	    );
 	}
 }
