@@ -25,7 +25,7 @@ export default class Company extends React.Component<props, any> {
 	    <label>Nombre </label>
 	    <label>Value: </label>
 	    <label> {this.props.name} </label>
-	    <Link to={"/edit/" + this.props.name}><button> Edit </button></Link>
+	    <Link to={"/edit/" + this.props.name}><button id="editbutton"> Edit </button></Link>
 	    
 	  </div>
 

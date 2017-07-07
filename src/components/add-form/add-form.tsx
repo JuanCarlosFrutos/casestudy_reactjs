@@ -41,8 +41,8 @@ export default class AddForm extends React.Component<any, any> {
 				{this.state.inputs.map(this.renderKeyValue)}
 
 				<button id="plusbutton" onClick={this.appendInput}>+</button>
-				<Link to="/search"><button>Save</button></Link>
-				<Link to="/search"><button id="pulsa">Close</button></Link>
+				<Link to="/search"><button id="savebutton">Save</button></Link>
+				<Link to="/search"><button id="closebutton">Close</button></Link>
 
 			</div>
 			
