@@ -1,0 +1,10 @@
+#exportContainer {
+
+  border: solid;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 40px;
+  padding: 10px;
+  font-family: sans-serif;
+
+}

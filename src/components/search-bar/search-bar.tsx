@@ -10,8 +10,9 @@ export default class SearchBar extends React.Component<any, any> {
 
     return (
         <fieldset>       
-              <input type="text"/>                             
-              <button>Go!</button>
+            <input type="text"/>                             
+            <button>Go!</button>
+            <label>Search Results: </label>
         </fieldset>
     );
 

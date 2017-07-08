@@ -21,6 +21,7 @@ export default class Company extends React.Component<props, any> {
 
 	  <div>
 
+	  	<input type="checkbox"/>
 	    <label>Key: </label>
 	    <label>Nombre </label>
 	    <label>Value: </label>

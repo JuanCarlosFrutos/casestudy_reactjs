@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { createStore } from 'redux';
-import { Provider } from 'react-reducer';
+import { Provider } from 'react-redux';
 import reducers from '../shared/store/reducers/search-reducer';
 
 
@@ -11,7 +11,7 @@ export default class App extends React.Component<any, {}> {
    public render() {
        return (
          <Provider store={store}>
-            <div className="container-fluid">Hello!</div>
+            <div className="container-fluid">Store Load!</div>
          </Provider>
        );
   }
