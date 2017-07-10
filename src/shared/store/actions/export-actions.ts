@@ -10,10 +10,20 @@ export const addExport = (company:companyModel) => {
   }
 }
 
-export const removeExport = (company:companyModel) => {
+/*
+ * removeExport receive index instead complet object because react-redux recomend 
+ * pass minimun size obect to actions.
+ */
+
+export const removeExport = (indexCompany:number) => {
   return {
     type: REMOVE_EXPORT,
-    company
+    indexCompany
   }
+}
+
+export const exportActions = {
+  ADD_EXPORT,
+  REMOVE_EXPORT,
 }
 

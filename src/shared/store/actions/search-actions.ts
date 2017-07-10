@@ -6,13 +6,17 @@ const SET_RESULTS = 'SET_RESULTS';
 export const getResults = (company:companyModel[]) => {
   return {
     type:GET_RESULTS,
-    company
   }
 }
 
-export const setResult = (company:companyModel[]) => {
+export const setResults = (company:companyModel[]) => {
   return {
     type: SET_RESULTS,
-    company
+    companies : company
   }
+}
+
+export const searchActions = {
+  GET_RESULTS,
+  SET_RESULTS,
 }
