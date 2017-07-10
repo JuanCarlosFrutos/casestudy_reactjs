@@ -1,5 +1,18 @@
-export default class SearchActions {
-  static readonly GET_RESULTS = 'GET_RESULTS';
-  static readonly SET_RESULTS = 'SET_RESULTS';
-  static readonly REMOVE_RESULTS = 'REMOVE_RESULTS';
+import companyModel from '../../models/company-model';
+
+const GET_RESULTS = 'GET_RESULTS';
+const SET_RESULTS = 'SET_RESULTS';
+
+export const getResults = (company:companyModel[]) => {
+  return {
+    type:GET_RESULTS,
+    company
+  }
+}
+
+export const setResult = (company:companyModel[]) => {
+  return {
+    type: SET_RESULTS,
+    company
+  }
 }

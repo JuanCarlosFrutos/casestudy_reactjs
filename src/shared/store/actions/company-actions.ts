@@ -1,4 +1,17 @@
-export class CompanyActions {
-  static readonly SELECTED_COMPANY   = 'SELECTED_COMPANY';
-  static readonly DESELECTED_COMPANY = 'DESELECTED_COMPANY';
+import companyModel from '../../models/company-model';
+
+const SELECTED_COMPANY = 'SELECTED_COMPANY';
+const DESELECTED_COMPANY = 'DESELECTED_COMPANY';
+
+export const selectCompany = (company:companyModel) => {
+  return {
+    type: SELECTED_COMPANY,
+    company
+  }
+}
+
+export const deselectCompany = () => {
+  return {
+    type: DESELECTED_COMPANY
+  }
 }
